@@ -1,0 +1,395 @@
+/* ========== RESET CSS ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== FONT FACE ==========  */
+
+@font-face {
+    font-family: Mark Pro;
+    src: url('../fonts/MarkPro\ Bold.otf');
+}
+
+@font-face {
+    font-family: Mark Pro Regular;
+    src: url('../fonts/MarkPro.otf');
+}
+
+@font-face {
+    font-family: Mark Pro B;
+    src: url('../fonts/MarkPro\ Black.otf');
+}
+
+/* ========== ROOT ========== */
+:root {
+
+    /* ========== COLORS ========== */
+    --black-smoke: #111111;
+    --black: #000;
+    --blue: #1877f2;
+    --dark-blue: #0966DE;
+    --dark-grey: #535353;
+    --light-grey: #e7e7e7;
+    --lighter-grey: #ededed;
+    --medium-black: #666666;
+    --medium-grey: #dbdbdb;
+    --primary-color-darken: #EA3241;
+    --primary-color: #FF4655;
+    --white-smoke: #f9f9f9;
+    --white: #fff;
+
+    /* ========== GLOBAL VARIABLES ========== */
+    --global-border-radius: 0.313rem;
+    --global-padding: 3.125rem;
+}
+
+/* ========== BODY ==========  */
+
+body {
+    background-attachment: fixed;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    padding: 25px 35px;
+}
+
+/* ========== HEADER ==========  */
+
+header {
+    margin-bottom: 5px;
+}
+
+.login__logo {
+    width: 12%;
+}
+
+/* ========== MAIN ========== */
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========== MAIN > LOGIN ========== */
+
+.login {
+    align-items: center;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    height: 36rem;
+    max-width: 26.25rem;
+    padding: 5rem var(--global-padding) 0px var(--global-padding);
+    width: 100%;
+}
+
+/* ========== MAIN > LOGIN > LOGIN__HEADER ========== */
+
+.login__header {
+    color: var(--black-smoke);
+    font-family: Mark Pro;
+    font-size: 1.7rem;
+    margin-bottom: var(--global-padding);
+}
+
+/* ========== MAIN > LOGIN > LOGIN__FORM ========== */
+
+.login__form {
+    width: 100%;
+}
+
+.login__label {
+    display: block;
+    margin-bottom: 0.8rem;
+    width: 100%;
+}
+
+.login__label .active {
+    margin: 0.5rem 0.688rem;
+}
+
+.login__label span {
+    color: var(--dark-grey);
+    cursor: text;
+    font-family: Mark Pro;
+    font-size: 11px;
+    margin: 1.25rem;
+    position: absolute;
+    transition: all 150ms ease;
+    width: 110px;
+}
+
+.login__form .login__label:nth-child(1) {
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-name: slideInput;
+    animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+    opacity: 0;
+    transform: translateX(-10px);
+    width: 0;
+}
+
+.login__form .login__label:nth-child(2) {
+    animation-delay: 0.1s;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-name: slideInput;
+    animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+    opacity: 0;
+    transform: translateX(-10px);
+    width: 0;
+}
+
+@keyframes slideInput {
+    to {
+        opacity: 1;
+        transform: translate(0);
+        width: 100%;
+    }
+}
+
+.login__label input {
+    background-color: var(--lighter-grey);
+    border-radius: var(--global-border-radius);
+    border: 2px solid transparent;
+    color: #333;
+    font-family: Mark Pro;
+    font-size: 1rem;
+    outline: none;
+    padding: 22px 10px 10px;
+    width: 100%;
+}
+
+.login__label input:hover {
+    background-color: var(--light-grey);
+}
+
+.login__label input:focus {
+    background-color: var(--white-smoke);
+    border: 2px solid var(--black-smoke);
+}
+
+/* ========== MAIN > LOGIN > LOGIN__SOCIALMEDIA ========== */
+
+.login__socialMedia {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.icon__buttons {
+    align-items: center;
+    border-radius: var(--global-border-radius);
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: flex;
+    height: 2.188rem;
+    justify-content: center;
+    width: 33.33%;
+}
+
+.icon__buttons img {
+    width: 1.25rem;
+}
+
+.login__socialMedia .icon__buttons:nth-child(1) {
+    background-color: var(--blue);
+}
+
+.login__socialMedia .icon__buttons:nth-child(1):hover {
+    background-color: var(--dark-blue);
+}
+
+.login__socialMedia .icon__buttons:nth-child(2) {
+    background-color: var(--white-smoke);
+}
+
+.login__socialMedia .icon__buttons:nth-child(2):hover {
+    background-color: var(--white);
+    border: 1px solid var(--medium-grey);
+}
+
+.login__socialMedia .icon__buttons:nth-child(3) {
+    background-color: var(--black);
+}
+
+.login__socialMedia .icon__buttons:nth-child(3):hover {
+    background-color: var(--black-smoke);
+}
+
+/* ========== MAIN > LOGIN > LOGIN__REMEMBER ========== */
+
+.login__remember {
+    align-items: center;
+    display: flex;
+    margin: 5px 0px 30px;
+    width: 100%;
+}
+
+.login__remember input {
+    appearance: none;
+    background-color: var(--light-grey);
+    border-radius: var(--global-border-radius);
+    cursor: pointer;
+    height: 20px;
+    margin-right: 0.5rem;
+    width: 20px;
+}
+
+.login__remember input:hover {
+    background-color: var(--medium-grey);
+}
+
+.login__remember input:checked {
+    background-color: var(--primary-color);
+}
+
+.login__remember input:checked:hover {
+    background-color: var(--primary-color-darken);
+}
+
+.login__remember input:checked::after {
+    border: 3px solid var(--white);
+    border-width: 0 2px 2px 0;
+    content: "";
+    display: block;
+    height: 8px;
+    margin: 4px 7px;
+    transform: rotate(45deg);
+    width: 5px;
+}
+
+.login__remember span {
+    color: var(--black-smoke);
+    font-family: Mark Pro Regular;
+    font-size: 0.9em;
+}
+
+/* ========== MAIN > LOGIN > LOGIN__BUTTON ========== */
+
+/* ACTIVE */
+.login__button {
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    height: 65px;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 15px;
+    width: 65px;
+}
+
+.login__button:hover {
+    background-color: var(--primary-color-darken);
+}
+
+.login__button svg {
+    fill: var(--white);
+}
+
+/* DISABLED */
+
+.login__button:disabled {
+    background-color: var(--white-smoke);
+    border: 2px solid var(--medium-grey);
+    cursor: auto;
+}
+
+.login__button:disabled svg {
+    fill: var(--medium-grey);
+}
+
+/* ========== MAIN > LOGIN > LOGIN__HELP ========== */
+
+.login__help {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login__help a {
+    color: var(--medium-black);
+    font-family: Mark Pro;
+    font-size: 0.688rem;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.login__help a:hover {
+    color: var(--black-smoke);
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+footer p {
+    color: var(--white-smoke);
+    font-family: Mark Pro;
+    margin-bottom: 1%;
+}
+
+.myName {
+    color: var(--primary-color);
+}
+
+footer svg:hover {
+    fill: var(--white);
+    transition: all 300ms ease;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+@media only screen and (max-width: 960px) {
+
+    /* ========== BODY ========== */
+    body {
+        background-attachment: fixed;
+        background-image: url('../images/background-mobile.jpg');
+        background-size: cover;
+        padding: 10px;
+    }
+
+    /* ========== HEADER ========== */
+    header {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 8%;
+    }
+
+    .login__header {
+        font-size: 1.2em;
+    }
+
+    .login__logo {
+        margin-bottom: 5%;
+        width: 40%;
+    }
+
+    /* ========== MAIN > LOGIN ========== */
+    .login {
+        max-width: 100%;
+        padding: 60px 25px;
+        width: 100%;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+        margin-top: 5%;
+    }
+}

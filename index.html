@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sessão</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://lolstatic-a.akamaihd.net/rso-login-page/3.2.31/assets/favicon.ico">
+
+    <!-- Importação CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Importação JavaScript -->
+    <script defer src="./js/script.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <svg class="login__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452.571 144" width="2500">
+            <path
+                d="m73.33 130.566-6.542-16.855 63.228 3.251-2.839 26.976zm15.15-130.566-88.48 41.797 13.684 62.983h18.048l-3.117-45.054 2.769-.858 10.852 45.912h18.75l-.694-54.88 2.77-.859 9.484 55.739h19.852l4.683-66.29 2.768-.86 4.913 67.15h26.251l9.24-92.183zm273.252 137.113-.183-5.255 18.165-.214.167-5.727-18.547-.23-.185-5.32 24.435-.573.2-6.282h-32.964l-.983 30.488h34.556l-.243-6.295zm-164.367-11.21-.388 5.705 9.168.306-.116 5.791-19.189-.563.836-16.725 26.384-.61-.381-6.295h-34.08l-3.056 30.488h38.83l-1.006-18.392zm240.52 2.36-25.185-4.258.109-3.3 24.093-.899-.608-6.294h-30.97l-1.584 15.802 25.603 4.452.116 2.904-26.64 1.035-.653 6.295h37.285zm-102.769 15.737-3.056-30.488h-8.774l-12.604 14.533-12.605-14.533h-8.773l-3.056 30.488h10.307l.986-19.779 13.141 13.484 13.14-13.484.988 19.779zm-43.316-142.137h-20.628l-1.878 94.285h24.923zm63.917 73.777-22.761.734-.755-55.45 23.806.72zm19.948-73.735h-64.312l-2.504 94.243h71.383zm76.906 20.592-2.297-20.634h-63.365l.536 18.38 20.266.702 2.078 75.204h24.973l-7.47-74.527zm-244.969-1.346 19.878-.665 2.265 18.785-22.943 10.837zm23.223 74.997h27.07l-17.642-42.316 14.079-7.692-9.619-44.277h-69.104l-2.274 20.433 15.458-.516-7.454 74.368h24.193l.654-23.706 17.432-9.523zm13.166 34.111 2.096-9.975 10.064-.455 2.103 10.01zm17.24 13.741h10.436l-8.257-30.49h-24.487l-8.256 30.49h10.436l1.616-7.692 16.941.219z"
+                fill="#FFF" />
+        </svg>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="login">
+            <h5 class="login__header">Iniciar sessão</h5>
+
+            <div class="login__form">
+                <form action="">
+                    <label for="user-login" class="login__label">
+                        <span>NOME DE USUÁRIO</span>
+                        <input type="text" name="user" id="user-login" class="login__input"/>
+                    </label>
+
+                    <label for="password-login" class="login__label">
+                        <span>SENHA</span>
+                        <input type="password" name="password" id="password-login" class="login__input" />
+                    </label>
+                </form>
+            </div>
+
+            <div class="login__socialMedia">
+                <button type="button" class="icon__buttons">
+                    <img src="./images/facebook-icon.png" alt="Facebook icon" />
+                </button>
+
+                <button type="button" class="icon__buttons">
+                    <img src="./images/google-icon.png" alt="Google icon" />
+                </button>
+
+                <button type="button" class="icon__buttons">
+                    <img src="./images/apple-icon.png" alt="Apple icon" />
+                </button>
+            </div>
+
+            <label for="remember-login" class="login__remember">
+                <input type="checkbox" name="remember" id="remember-login" />
+                <span>Manter login</span>
+            </label>
+
+            <button type="button" class="login__button" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </button>
+
+            <div class="login__help">
+                <a href="#">NÃO CONSEGUE FAZER LOGIN?</a>
+                <a href="#">CRIAR CONTA</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Desenvolvido por <span class="myName">Italo Vitorino</span></p>
+        <a href="https://github.com/italovitorino" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24">
+                <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+        </a>
+    </footer>
+</body>
+
+</html>
